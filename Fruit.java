@@ -1,34 +1,40 @@
 import java.util.Scanner;
 
+//Parent class Fruit
 class Fruit {
+	//only accessible in the class Fruit but can be accessed in other class by accessor
 	private String name;
+	
 	Scanner s = new Scanner(System.in);
 	
+	//parameterized constructor
 	public Fruit(String name) {
 			this.name = name;
 			System.out.println("Fruit constructor is invoked");
 			
 	}
 		
-		public String getName() {
-			return this.name;
-		}
+	//accessor
+	public String getName() {
+		return this.name;
+	}
 }
 
 
-
+//Subclass of Fruit
 class Watermelon extends Fruit {
 	String colour;
 	int stock;
-
 	double weight;
+	
+	//parameterized constructor
 	public Watermelon(String name, String colour, int stock) {
-		
 		super(name);
 		this.colour = colour;
 		System.out.println("Watermelon constructor is invoked");
 	}
 	
+	//method
 	public void calculatePrice(double pricePerKg) {
 		
 		System.out.printf("%-20s: ", "Enter Weight(kg)");
@@ -39,11 +45,13 @@ class Watermelon extends Fruit {
 	}
 }
 
+//Subclass of Fruit
 class Apple extends Fruit{
 	String flavour;
 	String type;
 	int amount;
 	
+	//parameterized constructor
 	public Apple(String name, String flavour, String type) {
 		super(name);
 		this.flavour = flavour;
@@ -52,6 +60,7 @@ class Apple extends Fruit{
 
 	}
 	
+	//method
 	public void purchase(double price) {
 		System.out.println("-----BUY 5 OR MORE FOR 20% DISCOUNT-----");
 		System.out.printf("%-20s: ", "Enter amount");
@@ -73,10 +82,12 @@ class Apple extends Fruit{
 	}
 }
 
+//Subclass of Apple
 class RedApple extends Apple{
 	String colour;
 	double price;
 	
+	//parameterized constructor
 	public RedApple(String name, String flavour,String type, String colour) {
 		super(name,flavour,type);
 		this.colour = colour;
@@ -86,10 +97,12 @@ class RedApple extends Apple{
 		
 }
 
+//Subclass of Apple
 class GreenApple extends Apple{
 	String colour;
 	double price;
 	
+	//parameterized constructor
 	public GreenApple(String name, String flavour, String type, String colour) {
 		super(name,flavour,type);
 		this.colour = colour;
@@ -99,6 +112,7 @@ class GreenApple extends Apple{
 
 }
 
+//Main class
 class Main {
 	public static void main(String[] args) {
 		System.out.println("-----WELCOME TO HAWAIIAN FRUIT SHOP-----");
