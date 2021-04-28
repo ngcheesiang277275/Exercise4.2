@@ -74,10 +74,7 @@ class Apple extends Fruit{
 			System.out.printf("%-20s: RM%.2f%n", ">>>Final price", discountPriceApple);	
 
 		}else {
-			double discountPriceApple = priceApple * 0.90;
 			System.out.printf("%-20s: RM%.2f%n", ">>>Final price", priceApple);	
-
-
 		}
 	}
 }
