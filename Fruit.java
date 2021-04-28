@@ -31,6 +31,7 @@ class Watermelon extends Fruit {
 	public Watermelon(String name, String colour, int stock) {
 		super(name);
 		this.colour = colour;
+		this.stock = stock;
 		System.out.println("Watermelon constructor is invoked");
 	}
 	
@@ -116,6 +117,7 @@ class Main {
 		Watermelon a = new Watermelon("Watermelon", "Red", 22);
 		System.out.printf("%-20s: %s%n", "Fruit", a.getName());
 		System.out.printf("%-20s: %s%n", "Colour", a.colour);
+		System.out.printf("%-20s: %s%n", "Stock", a.stock);
 		a.calculatePrice(4.50);
 		System.out.println("-----------------------------------------");
 		
